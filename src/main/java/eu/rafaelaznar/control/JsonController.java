@@ -81,17 +81,17 @@ public class JsonController extends HttpServlet {
                 out.println("<head><title>Trolleyes server</title><link rel=\"shortcut icon\" href=\"favicon.ico\" type=\"image/x-icon\"></head>");
                 out.println("<body style=\"background: url(trolleyes400.png) no-repeat center center fixed;\">");
                 out.println("<h1>Welcome to trolleyes server</h1><h2>Servlet controller json listening at " + InetAddress.getLocalHost().getHostAddress() + ":" + request.getLocalPort() + request.getContextPath() + "</h2>");
-                out.print("<a href='http://localhost:8081/trolleyes-server/json?ob=usuario&op=login&user=pablo&pass=26079e41910bcde04be636fbeecc9045379882b5ad3fe7f70b762436c6d98055'>Login</a></br>");                   
-                    out.print("<a href='http://localhost:8081/trolleyes-server/json?ob=producto&op=getpage&np=1&rpp=3'>Productos paginados</a></br>");
-                    out.print("<a href='http://localhost:8081/trolleyes-server/json?ob=pedido&op=getpage&np=1&rpp=10'>Todos los pedidos</a></br>");
-                    out.print("<a href='http://localhost:8081/trolleyes-server/json?ob=carrito&op=add&id=1&cantidad=5'>Añadir al carrito 5 de producto 1</a></br>");
-                    out.print("<a href='http://localhost:8081/trolleyes-server/json?ob=carrito&op=add&id=2&cantidad=6'>Añadir al carrito 6 de producto 2</a></br>");
-                    out.print("<a href='http://localhost:8081/trolleyes-server/json?ob=carrito&op=buy'>Comprar</a></br>");
-                    out.print("<a href='http://localhost:8081/trolleyes-server/json?ob=carrito&op=list'>Listar carrito</a></br>");
-                    out.print("<a href='http://localhost:8081/trolleyes-server/json?ob=carrito&op=empty'>Vaciar carrito</a></br>");
-                    out.print("<a href='http://localhost:8081/trolleyes-server/json?ob=pedido&op=get&id=5'>Pedido creado</a></br>");
-                    out.print("<a href='http://localhost:8081/trolleyes-server/json?ob=linea_pedido&op=getpagex&np=1&rpp=3&id_foreign=1&ob_foreign=pedido'>Linea de pedido creado</a></br>");
-                    out.print("<a href='http://localhost:8081/trolleyes-server/json?ob=usuario&op=logout'>Logout</a></br>");  
+                out.print("<a href='http://127.0.0.1:8081/trolleyes-server/json?ob=usuario&op=login&user=pablo&pass=26079e41910bcde04be636fbeecc9045379882b5ad3fe7f70b762436c6d98055'>Login</a></br>");                   
+                    out.print("<a href='http://127.0.0.1:8081/trolleyes-server/json?ob=producto&op=getpage&np=1&rpp=3'>Productos paginados</a></br>");
+                    out.print("<a href='http://127.0.0.1:8081/trolleyes-server/json?ob=pedido&op=getpage&np=1&rpp=10'>Todos los pedidos</a></br>");
+                    out.print("<a href='http://127.0.0.1:8081/trolleyes-server/json?ob=carrito&op=add&id=1&cantidad=5'>Añadir al carrito 5 de producto 1</a></br>");
+                    out.print("<a href='http://127.0.0.1:8081/trolleyes-server/json?ob=carrito&op=add&id=2&cantidad=6'>Añadir al carrito 6 de producto 2</a></br>");
+                    out.print("<a href='http://127.0.0.1:8081/trolleyes-server/json?ob=carrito&op=buy'>Comprar</a></br>");
+                    out.print("<a href='http://127.0.0.1:8081/trolleyes-server/json?ob=carrito&op=list'>Listar carrito</a></br>");
+                    out.print("<a href='http://127.0.0.1:8081/trolleyes-server/json?ob=carrito&op=empty'>Vaciar carrito</a></br>");
+                    out.print("<a href='http://127.0.0.1:8081/trolleyes-server/json?ob=pedido&op=get&id=5'>Pedido creado</a></br>");
+                    out.print("<a href='http://127.0.0.1:8081/trolleyes-server/json?ob=linea_pedido&op=getpagex&np=1&rpp=3&id_foreign=1&ob_foreign=pedido'>Linea de pedido creado</a></br>");
+                    out.print("<a href='http://127.0.0.1:8081/trolleyes-server/json?ob=usuario&op=logout'>Logout</a></br>");  
                     
                 out.println("");
                 try {
