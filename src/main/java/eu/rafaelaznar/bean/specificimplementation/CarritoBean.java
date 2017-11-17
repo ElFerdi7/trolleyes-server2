@@ -19,14 +19,14 @@ public class CarritoBean {
     @Expose
     private ProductoSpecificBeanImplementation producto;
     @Expose(serialize = false)
-    private Integer id_producto = 0;
+    private Integer id_producto=0;
 
-    public CarritoBean(Integer cantidad, ProductoSpecificBeanImplementation producto) {
+    public CarritoBean(Integer cantidad, ProductoSpecificBeanImplementation producto) {   
         this.cantidad = cantidad;
         this.producto = producto;
     }
 
-    public Integer getId_producto() {
+   public Integer getId_producto() {
         return id_producto;
     }
 
