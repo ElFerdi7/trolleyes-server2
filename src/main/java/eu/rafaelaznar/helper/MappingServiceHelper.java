@@ -217,6 +217,9 @@ public class MappingServiceHelper {
                     case "empty":
                         oReplyBean = oCarritoService.empty();
                         break;
+                    case "count":
+                        oReplyBean = oCarritoService.count();
+                        break;
                     default:
                         oReplyBean = new ReplyBean(500, EncodingUtilHelper.quotate("Operation not found : Please contact your administrator"));
                         break;
