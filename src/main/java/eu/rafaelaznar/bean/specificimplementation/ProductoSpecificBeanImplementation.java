@@ -41,6 +41,8 @@ import java.util.Date;
 
 public class ProductoSpecificBeanImplementation extends TableGenericBeanImplementation {
 
+    @Expose
+    private String imagen;
      @Expose
     private String codigo;
     @Expose
@@ -66,6 +68,14 @@ public class ProductoSpecificBeanImplementation extends TableGenericBeanImplemen
         this.id = id;
     }
 
+    public String getImagen() {
+        return imagen;
+    }
+
+    public void setImagen(String imagen) {
+        this.imagen = imagen;
+    }
+   
     public String getCodigo() {
         return codigo;
     }
@@ -102,6 +112,7 @@ public class ProductoSpecificBeanImplementation extends TableGenericBeanImplemen
     public String getColumns() {
         String strColumns = "";
         strColumns += "id,";
+        strColumns += "imagen,";
         strColumns += "codigo,";
         strColumns += "existencias,";
         strColumns += "precio,";
@@ -113,6 +124,7 @@ public class ProductoSpecificBeanImplementation extends TableGenericBeanImplemen
     public String getValues() {
         String strColumns = "";
         strColumns += id + ",";
+        strColumns += EncodingUtilHelper.quotate(imagen) + ",";
         strColumns += EncodingUtilHelper.quotate(codigo) + ",";
         strColumns += existencias + ",";
         strColumns += precio + ",";
@@ -124,6 +136,7 @@ public class ProductoSpecificBeanImplementation extends TableGenericBeanImplemen
     @Override
     public String toPairs() {
         String strPairs = "";
+        strPairs += "imagen=" + EncodingUtilHelper.quotate(imagen) + ",";
         strPairs += "codigo=" + EncodingUtilHelper.quotate(codigo) + ",";
         strPairs += "existencias=" + existencias + ",";
         strPairs += "precio=" + precio + ",";
@@ -134,6 +147,7 @@ public class ProductoSpecificBeanImplementation extends TableGenericBeanImplemen
     @Override
     public GenericBeanInterface fill(ResultSet oResultSet, Connection oConnection, UsuarioSpecificBeanImplementation oPuserBean_security, Integer expand) throws SQLException, Exception {
         this.setId(oResultSet.getInt("id"));
+        this.setImagen(oResultSet.getString("imagen"));
         this.setCodigo(oResultSet.getString("codigo"));
         this.setExistencias(oResultSet.getInt("existencias"));
         this.setPrecio(oResultSet.getDouble("precio"));
