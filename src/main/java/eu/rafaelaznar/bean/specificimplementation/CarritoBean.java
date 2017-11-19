@@ -26,6 +26,10 @@ public class CarritoBean {
         this.producto = producto;
     }
 
+    public CarritoBean() {
+      
+    }
+
    public Integer getId_producto() {
         return id_producto;
     }
