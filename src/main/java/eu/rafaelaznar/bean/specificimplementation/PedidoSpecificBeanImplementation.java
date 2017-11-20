@@ -131,7 +131,7 @@ public class PedidoSpecificBeanImplementation extends TableGenericBeanImplementa
     @Override
     public String getValues() {
         String strColumns = "";
-        strColumns += id + ",";
+       // strColumns += id + ",";
         strColumns += EncodingUtilHelper.stringifyAndQuotate(fecha) + ",";
         strColumns += iva + ",";
         strColumns += tiene_iva + ",";

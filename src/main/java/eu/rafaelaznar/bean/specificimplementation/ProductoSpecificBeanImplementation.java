@@ -123,7 +123,7 @@ public class ProductoSpecificBeanImplementation extends TableGenericBeanImplemen
     @Override
     public String getValues() {
         String strColumns = "";
-        strColumns += id + ",";
+       // strColumns += id + ",";
         strColumns += EncodingUtilHelper.quotate(imagen) + ",";
         strColumns += EncodingUtilHelper.quotate(codigo) + ",";
         strColumns += existencias + ",";

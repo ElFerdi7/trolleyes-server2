@@ -125,7 +125,7 @@ public class LineadepedidoSpecificBeanImplementation extends TableGenericBeanImp
     @Override
     public String getValues() {
         String strColumns = "";
-        strColumns += id + ",";
+        //strColumns += id + ",";
         strColumns += cantidad + ",";
         strColumns += id_pedido + ",";
         strColumns += id_producto;
