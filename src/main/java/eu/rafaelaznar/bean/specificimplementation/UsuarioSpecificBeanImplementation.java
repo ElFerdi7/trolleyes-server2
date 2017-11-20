@@ -179,7 +179,7 @@ public class UsuarioSpecificBeanImplementation extends TableGenericBeanImplement
     @Override
     public String getValues() {
         String strColumns = "";
-        strColumns += id + ",";
+        //strColumns += id + ",";
         strColumns += EncodingUtilHelper.quotate(dni) + ",";
         strColumns += EncodingUtilHelper.quotate(nombre) + ",";
         strColumns += EncodingUtilHelper.quotate(primer_apellido) + ",";
