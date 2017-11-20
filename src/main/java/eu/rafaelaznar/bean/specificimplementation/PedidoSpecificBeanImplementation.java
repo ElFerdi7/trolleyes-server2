@@ -128,16 +128,16 @@ public class PedidoSpecificBeanImplementation extends TableGenericBeanImplementa
 //        return strColumns;
 //    }
 
-    @Override
-    public String getValues() {
-        String strColumns = "";
-       // strColumns += id + ",";
-        strColumns += EncodingUtilHelper.stringifyAndQuotate(fecha) + ",";
-        strColumns += iva + ",";
-        strColumns += tiene_iva + ",";
-        strColumns += id_usuario;
-        return strColumns;
-    }
+//    @Override
+//    public String getValues() {
+//        String strColumns = "";
+//       // strColumns += id + ",";
+//        strColumns += EncodingUtilHelper.stringifyAndQuotate(fecha) + ",";
+//        strColumns += iva + ",";
+//        strColumns += tiene_iva + ",";
+//        strColumns += id_usuario;
+//        return strColumns;
+//    }
 
     @Override
     public String toPairs() {

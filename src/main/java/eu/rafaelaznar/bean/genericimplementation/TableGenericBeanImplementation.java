@@ -32,6 +32,7 @@ package eu.rafaelaznar.bean.genericimplementation;
 import com.google.gson.annotations.Expose;
 
 import eu.rafaelaznar.bean.publicinterface.GenericBeanInterface;
+import eu.rafaelaznar.helper.EncodingUtilHelper;
 import eu.rafaelaznar.helper.Log4jConfigurationHelper;
 import java.lang.reflect.Field;
 
@@ -77,8 +78,24 @@ public abstract class TableGenericBeanImplementation extends ViewGenericBeanImpl
     }
 
     @Override
-    public String getValues() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public String getValues() throws Exception {
+         String strValues = "";
+        try {
+            TableGenericBeanImplementation oBean = (TableGenericBeanImplementation) Class.forName(this.getClass().getName()).newInstance();
+            Field[] oFields = oBean.getClass().getDeclaredFields();
+            for (Field x : oFields) {
+                if (!x.getName().startsWith("obj_")) {
+                 
+                    strValues += EncodingUtilHelper.quotate(x.getName()) + ",";
+                }
+            }
+            strValues = strValues.substring(0, strValues.length() - 1);
+        } catch (ClassNotFoundException | InstantiationException | IllegalAccessException ex) {
+            String msg = this.getClass().getName() + ":" + (ex.getStackTrace()[0]).getMethodName();
+            Log4jConfigurationHelper.errorLog(msg, ex);
+            throw new Exception(msg, ex);
+        }
+        return strValues;
     }
 
     @Override

@@ -65,13 +65,13 @@ public class TipousuarioSpecificBeanImplementation extends TableGenericBeanImple
 //        return strColumns;
 //    }
 
-    @Override
-    public String getValues() {
-        String strColumns = "";
-        //strColumns += id + ",";
-        strColumns += EncodingUtilHelper.quotate(descripcion);
-        return strColumns;
-    }
+//    @Override
+//    public String getValues() {
+//        String strColumns = "";
+//        //strColumns += id + ",";
+//        strColumns += EncodingUtilHelper.quotate(descripcion);
+//        return strColumns;
+//    }
 
     @Override
     public String toPairs() {

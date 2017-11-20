@@ -120,18 +120,18 @@ public class ProductoSpecificBeanImplementation extends TableGenericBeanImplemen
 //        return strColumns;
 //    }
 
-    @Override
-    public String getValues() {
-        String strColumns = "";
-       // strColumns += id + ",";
-        strColumns += EncodingUtilHelper.quotate(imagen) + ",";
-        strColumns += EncodingUtilHelper.quotate(codigo) + ",";
-        strColumns += existencias + ",";
-        strColumns += precio + ",";
-        strColumns += EncodingUtilHelper.quotate(descripcion);
-    
-        return strColumns;
-    }
+//    @Override
+//    public String getValues() {
+//        String strColumns = "";
+//       // strColumns += id + ",";
+//        strColumns += EncodingUtilHelper.quotate(imagen) + ",";
+//        strColumns += EncodingUtilHelper.quotate(codigo) + ",";
+//        strColumns += existencias + ",";
+//        strColumns += precio + ",";
+//        strColumns += EncodingUtilHelper.quotate(descripcion);
+//    
+//        return strColumns;
+//    }
 
     @Override
     public String toPairs() {
