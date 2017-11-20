@@ -185,6 +185,7 @@ public class UsuarioSpecificBeanImplementation extends TableGenericBeanImplement
         strColumns += EncodingUtilHelper.quotate(primer_apellido) + ",";
         strColumns += EncodingUtilHelper.quotate(segundo_apellido) + ",";
         strColumns += EncodingUtilHelper.quotate(login) + ",";
+        strColumns += EncodingUtilHelper.quotate("da8ab09ab4889c6208116a675cad0b13e335943bd7fc418782d054b32fdfba04") + ", ";
         strColumns += EncodingUtilHelper.quotate(email) + ",";
         strColumns += EncodingUtilHelper.stringifyAndQuotate(fecha_nacimiento) + ",";
         strColumns += id_tipousuario;
