@@ -40,6 +40,7 @@ import java.util.Date;
 
 public class UsuarioSpecificBeanImplementation extends TableGenericBeanImplementation {
 
+   
     @Expose
     private String dni;
     @Expose
@@ -160,20 +161,20 @@ public class UsuarioSpecificBeanImplementation extends TableGenericBeanImplement
         this.obj_tipousuario = obj_tipousuario;
     }
 
-    @Override
-    public String getColumns() {
-        String strColumns = "";
-        strColumns += "id,";
-        strColumns += "dni,";
-        strColumns += "nombre,";
-        strColumns += "primer_apellido,";
-        strColumns += "segundo_apellido,";
-        strColumns += "login,";
-        strColumns += "email,";
-        strColumns += "fecha_nacimiento,";
-        strColumns += "id_tipousuario";
-        return strColumns;
-    }
+//    @Override
+//    public String getColumns() {
+//        String strColumns = "";
+//        strColumns += "id,";
+//        strColumns += "dni,";
+//        strColumns += "nombre,";
+//        strColumns += "primer_apellido,";
+//        strColumns += "segundo_apellido,";
+//        strColumns += "login,";
+//        strColumns += "email,";
+//        strColumns += "fecha_nacimiento,";
+//        strColumns += "id_tipousuario";
+//        return strColumns;
+//    }
 
     @Override
     public String getValues() {

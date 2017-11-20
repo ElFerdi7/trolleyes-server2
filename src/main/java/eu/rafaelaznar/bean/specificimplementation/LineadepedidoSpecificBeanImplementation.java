@@ -112,15 +112,15 @@ public class LineadepedidoSpecificBeanImplementation extends TableGenericBeanImp
         this.obj_producto = obj_producto;
     }
 
-    @Override
-    public String getColumns() {
-        String strColumns = "";
-        strColumns += "id,";
-        strColumns += "cantidad,";
-        strColumns += "id_pedido,";
-        strColumns += "id_producto";
-        return strColumns;
-    }
+//    @Override
+//    public String getColumns() {
+//        String strColumns = "";
+//        strColumns += "id,";
+//        strColumns += "cantidad,";
+//        strColumns += "id_pedido,";
+//        strColumns += "id_producto";
+//        return strColumns;
+//    }
 
     @Override
     public String getValues() {

@@ -57,13 +57,13 @@ public class TipousuarioSpecificBeanImplementation extends TableGenericBeanImple
         this.descripcion = descripcion;
     }
 
-    @Override
-    public String getColumns() {
-        String strColumns = "";
-        strColumns += "id,";
-        strColumns += "descripcion";
-        return strColumns;
-    }
+//    @Override
+//    public String getColumns() {
+//        String strColumns = "";
+//        strColumns += "id,";
+//        strColumns += "descripcion";
+//        return strColumns;
+//    }
 
     @Override
     public String getValues() {

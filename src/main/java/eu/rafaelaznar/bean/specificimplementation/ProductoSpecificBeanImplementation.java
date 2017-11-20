@@ -108,17 +108,17 @@ public class ProductoSpecificBeanImplementation extends TableGenericBeanImplemen
         this.descripcion = descripcion;
     }
     
-     @Override
-    public String getColumns() {
-        String strColumns = "";
-        strColumns += "id,";
-        strColumns += "imagen,";
-        strColumns += "codigo,";
-        strColumns += "existencias,";
-        strColumns += "precio,";
-        strColumns += "descripcion";
-        return strColumns;
-    }
+//     @Override
+//    public String getColumns() {
+//        String strColumns = "";
+//        strColumns += "id,";
+//        strColumns += "imagen,";
+//        strColumns += "codigo,";
+//        strColumns += "existencias,";
+//        strColumns += "precio,";
+//        strColumns += "descripcion";
+//        return strColumns;
+//    }
 
     @Override
     public String getValues() {

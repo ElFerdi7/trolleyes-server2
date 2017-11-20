@@ -117,16 +117,16 @@ public class PedidoSpecificBeanImplementation extends TableGenericBeanImplementa
     public void setTiene_iva(int tiene_iva) {
         this.tiene_iva = tiene_iva;
     }
-    @Override
-    public String getColumns() {
-        String strColumns = "";
-        strColumns += "id,";
-        strColumns += "fecha,";
-        strColumns += "iva,";
-        strColumns += "tiene_iva,";
-        strColumns += "id_usuario";
-        return strColumns;
-    }
+//    @Override
+//    public String getColumns() {
+//        String strColumns = "";
+//        strColumns += "id,";
+//        strColumns += "fecha,";
+//        strColumns += "iva,";
+//        strColumns += "tiene_iva,";
+//        strColumns += "id_usuario";
+//        return strColumns;
+//    }
 
     @Override
     public String getValues() {
