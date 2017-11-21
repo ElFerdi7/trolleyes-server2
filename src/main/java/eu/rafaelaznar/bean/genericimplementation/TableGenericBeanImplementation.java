@@ -28,13 +28,13 @@
  */
 package eu.rafaelaznar.bean.genericimplementation;
 
-
 import com.google.gson.annotations.Expose;
 
 import eu.rafaelaznar.bean.publicinterface.GenericBeanInterface;
 import eu.rafaelaznar.helper.EncodingUtilHelper;
 import eu.rafaelaznar.helper.Log4jConfigurationHelper;
 import java.lang.reflect.Field;
+import java.util.Date;
 
 public abstract class TableGenericBeanImplementation extends ViewGenericBeanImplementation implements GenericBeanInterface {
 
@@ -79,30 +79,47 @@ public abstract class TableGenericBeanImplementation extends ViewGenericBeanImpl
 
     @Override
     public String getValues() throws Exception {
-         String strValues = "";
+        String strColumns = "";
         try {
             TableGenericBeanImplementation oBean = (TableGenericBeanImplementation) Class.forName(this.getClass().getName()).newInstance();
             Field[] oFields = oBean.getClass().getDeclaredFields();
             for (Field x : oFields) {
+                x.setAccessible(true);
                 if (!x.getName().startsWith("obj_")) {
-                 
-                    strValues += EncodingUtilHelper.quotate(x.getName()) + ",";
+                    if (x.getName().equals("password")) {
+                        strColumns += EncodingUtilHelper.quotate("da8ab09ab4889c6208116a675cad0b13e335943bd7fc418782d054b32fdfba04") + ",";
+                    } else {
+                        if (x.getType() == String.class) {
+                            strColumns += EncodingUtilHelper.quotate((String) x.get(this)) + ",";
+                        }
+                        if (x.getType() == Date.class) {
+                            strColumns += EncodingUtilHelper.stringifyAndQuotate((Date) x.get(this)) + ",";
+                        }
+                        if (x.getType() == Integer.class) {
+                            strColumns += x.get(this) + ",";
+                        }
+                        if (x.getType() == Double.class) {
+                            strColumns += x.get(this) + ",";
+                        }
+                    }
+
                 }
+                x.setAccessible(false);
             }
-            strValues = strValues.substring(0, strValues.length() - 1);
+            if (!strColumns.equals("")) {
+                strColumns = strColumns.substring(0, strColumns.length() - 1);
+            }
         } catch (ClassNotFoundException | InstantiationException | IllegalAccessException ex) {
             String msg = this.getClass().getName() + ":" + (ex.getStackTrace()[0]).getMethodName();
             Log4jConfigurationHelper.errorLog(msg, ex);
             throw new Exception(msg, ex);
         }
-        return strValues;
+        return strColumns;
     }
 
     @Override
     public String toPairs() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-
-    
 
 }
