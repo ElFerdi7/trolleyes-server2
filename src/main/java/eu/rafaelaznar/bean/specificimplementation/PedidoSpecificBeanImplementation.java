@@ -139,15 +139,15 @@ public class PedidoSpecificBeanImplementation extends TableGenericBeanImplementa
 //        return strColumns;
 //    }
 
-    @Override
-    public String toPairs() {
-        String strPairs = "";
-        strPairs += "fecha=" + EncodingUtilHelper.stringifyAndQuotate(fecha) + ",";
-        strPairs += "iva=" + iva + ",";
-        strPairs += "tiene_iva=" + tiene_iva + ",";
-        strPairs += "id_usuario=" + id_usuario;
-        return strPairs;
-    }
+//    @Override
+//    public String toPairs() {
+//        String strPairs = "";
+//        strPairs += "fecha=" + EncodingUtilHelper.stringifyAndQuotate(fecha) + ",";
+//        strPairs += "iva=" + iva + ",";
+//        strPairs += "tiene_iva=" + tiene_iva + ",";
+//        strPairs += "id_usuario=" + id_usuario;
+//        return strPairs;
+//    }
 
     @Override
     public GenericBeanInterface fill(ResultSet oResultSet, Connection oConnection, UsuarioSpecificBeanImplementation oPuserBean_security, Integer expand) throws SQLException, Exception {

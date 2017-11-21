@@ -133,16 +133,16 @@ public class ProductoSpecificBeanImplementation extends TableGenericBeanImplemen
 //        return strColumns;
 //    }
 
-    @Override
-    public String toPairs() {
-        String strPairs = "";
-        strPairs += "imagen=" + EncodingUtilHelper.quotate(imagen) + ",";
-        strPairs += "codigo=" + EncodingUtilHelper.quotate(codigo) + ",";
-        strPairs += "existencias=" + existencias + ",";
-        strPairs += "precio=" + precio + ",";
-        strPairs += "descripcion=" + EncodingUtilHelper.quotate(descripcion);
-        return strPairs;
-    }
+//    @Override
+//    public String toPairs() {
+//        String strPairs = "";
+//        strPairs += "imagen=" + EncodingUtilHelper.quotate(imagen) + ",";
+//        strPairs += "codigo=" + EncodingUtilHelper.quotate(codigo) + ",";
+//        strPairs += "existencias=" + existencias + ",";
+//        strPairs += "precio=" + precio + ",";
+//        strPairs += "descripcion=" + EncodingUtilHelper.quotate(descripcion);
+//        return strPairs;
+//    }
 
     @Override
     public GenericBeanInterface fill(ResultSet oResultSet, Connection oConnection, UsuarioSpecificBeanImplementation oPuserBean_security, Integer expand) throws SQLException, Exception {

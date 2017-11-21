@@ -72,14 +72,14 @@ public class TipousuarioSpecificBeanImplementation extends TableGenericBeanImple
 //        strColumns += EncodingUtilHelper.quotate(descripcion);
 //        return strColumns;
 //    }
-
-    @Override
-    public String toPairs() {
-        String strPairs = "";
-        //strPairs += "id=" + id + ",";
-        strPairs += "descripcion=" + EncodingUtilHelper.quotate(descripcion);
-        return strPairs;
-    }
+//
+//    @Override
+//    public String toPairs() {
+//        String strPairs = "";
+//        //strPairs += "id=" + id + ",";
+//        strPairs += "descripcion=" + EncodingUtilHelper.quotate(descripcion);
+//        return strPairs;
+//    }
 
     @Override
     public GenericBeanInterface fill(ResultSet oResultSet, Connection pooledConnection, UsuarioSpecificBeanImplementation oPuserBean_security, Integer expand) throws SQLException, Exception {

@@ -132,14 +132,14 @@ public class LineadepedidoSpecificBeanImplementation extends TableGenericBeanImp
 //        return strColumns;
 //    }
 
-    @Override
-    public String toPairs() {
-        String strPairs = "";
-        strPairs += "cantidad=" + cantidad + ",";
-        strPairs += "id_pedido=" + id_pedido + ",";
-        strPairs += "id_producto=" + id_producto;
-        return strPairs;
-    }
+//    @Override
+//    public String toPairs() {
+//        String strPairs = "";
+//        strPairs += "cantidad=" + cantidad + ",";
+//        strPairs += "id_pedido=" + id_pedido + ",";
+//        strPairs += "id_producto=" + id_producto;
+//        return strPairs;
+//    }
 
     @Override
     public GenericBeanInterface fill(ResultSet oResultSet, Connection oConnection, UsuarioSpecificBeanImplementation oPuserBean_security, Integer expand) throws SQLException, Exception {

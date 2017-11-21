@@ -192,19 +192,19 @@ public class UsuarioSpecificBeanImplementation extends TableGenericBeanImplement
 //        return strColumns;
 //    }
 
-    @Override
-    public String toPairs() {
-        String strPairs = "";
-        strPairs += "dni=" + EncodingUtilHelper.quotate(dni) + ",";
-        strPairs += "nombre=" + EncodingUtilHelper.quotate(nombre) + ",";
-        strPairs += "primer_apellido=" + EncodingUtilHelper.quotate(primer_apellido) + ",";
-        strPairs += "segundo_apellido=" + EncodingUtilHelper.quotate(segundo_apellido) + ",";
-        strPairs += "login=" + EncodingUtilHelper.quotate(login) + ",";
-        strPairs += "email=" + EncodingUtilHelper.quotate(email) + ",";
-        strPairs += "fecha_nacimiento=" + EncodingUtilHelper.stringifyAndQuotate(fecha_nacimiento) + ",";
-        strPairs += "id_tipousuario=" + id_tipousuario;
-        return strPairs;
-    }
+//    @Override
+//    public String toPairs() {
+//        String strPairs = "";
+//        strPairs += "dni=" + EncodingUtilHelper.quotate(dni) + ",";
+//        strPairs += "nombre=" + EncodingUtilHelper.quotate(nombre) + ",";
+//        strPairs += "primer_apellido=" + EncodingUtilHelper.quotate(primer_apellido) + ",";
+//        strPairs += "segundo_apellido=" + EncodingUtilHelper.quotate(segundo_apellido) + ",";
+//        strPairs += "login=" + EncodingUtilHelper.quotate(login) + ",";
+//        strPairs += "email=" + EncodingUtilHelper.quotate(email) + ",";
+//        strPairs += "fecha_nacimiento=" + EncodingUtilHelper.stringifyAndQuotate(fecha_nacimiento) + ",";
+//        strPairs += "id_tipousuario=" + id_tipousuario;
+//        return strPairs;
+//    }
 
     @Override
     public GenericBeanInterface fill(ResultSet oResultSet, Connection oConnection, UsuarioSpecificBeanImplementation oPuserBean_security, Integer expand) throws SQLException, Exception {
