@@ -126,9 +126,7 @@ public abstract class TableGenericBeanImplementation extends ViewGenericBeanImpl
             for (Field x : oFields) {
                 x.setAccessible(true);
                 if (!x.getName().startsWith("obj_")) {
-                    if (x.getName().equals("password")) {
-                        strColumns += x.getName() + "=" + EncodingUtilHelper.quotate("da8ab09ab4889c6208116a675cad0b13e335943bd7fc418782d054b32fdfba04") + ",";
-                    } else {
+                 
                         if (x.getType() == String.class) {
                             strColumns += x.getName() + "=" + EncodingUtilHelper.quotate((String) x.get(this)) + ",";
                         }
@@ -141,7 +139,7 @@ public abstract class TableGenericBeanImplementation extends ViewGenericBeanImpl
                         if (x.getType() == Double.class) {
                             strColumns += x.getName() + "=" + x.get(this) + ",";
                         }
-                    }
+                    
 
                 }
                 x.setAccessible(false);
